@@ -1,0 +1,84 @@
+/* Reset default browser spacing */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #9f9fb5;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header styling */
+header {
+    background-color: #0b3d91;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Navigation links */
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* Hero section */
+.hero {
+    background-color: #0b3d91;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* Button styling */
+button {
+    background-color: gold;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6c200;
+}
+
+/* General sections */
+section {
+    padding: 40px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
