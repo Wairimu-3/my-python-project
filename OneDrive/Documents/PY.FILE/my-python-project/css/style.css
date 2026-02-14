@@ -282,4 +282,296 @@ footer {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
+/* Contact Page */
+.contact-details {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.map iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contact-info-form {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-info, .contact-form {
+    flex: 1 1 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: gold;
+    color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-info-form {
+        flex-direction: column;
+    }
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-btn i {
+    font-size: 18px;
+}
+
+/* Facebook */
+.social-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-btn.facebook:hover {
+    background-color: #2d4373;
+}
+
+/* YouTube */
+.social-btn.youtube {
+    background-color: #ff0000;
+}
+
+.social-btn.youtube:hover {
+    background-color: #cc0000;
+}
+
+/* Instagram */
+.social-btn.instagram {
+    background: #E1306C; /* Instagram gradient pink */
+}
+
+.social-btn.instagram:hover {
+    background: #C13584; /* Darker hover */
+}
+/* Floating Social Bar */
+.floating-social {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+/* Facebook */
+.floating-social a.facebook {
+    background-color: #3b5998;
+}
+.floating-social a.facebook:hover {
+    background-color: #2d4373;
+}
+
+/* YouTube */
+.floating-social a.youtube {
+    background-color: #ff0000;
+}
+.floating-social a.youtube:hover {
+    background-color: #cc0000;
+}
+
+/* Instagram */
+.floating-social a.instagram {
+    background: #E1306C;
+}
+.floating-social a.instagram:hover {
+    background: #C13584;
+}
+
+/* Mobile Responsive: hide floating bar on small screens */
+@media (max-width: 768px) {
+    .floating-social {
+        display: none;
+    }
+}
+/* Mobile Social Logos */
+.mobile-social {
+    display: none; /* hidden on desktop */
+}
+
+.mobile-social a {
+    position: fixed;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+    z-index: 1000;
+}
+
+.mobile-social a img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Arrange logos horizontally */
+.mobile-social a.facebook { left: 15px; }
+.mobile-social a.youtube { left: 70px; }
+.mobile-social a.instagram { left: 125px; }
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+    .floating-social {
+        display: none; /* hide the vertical bar */
+    }
+    .mobile-social {
+        display: flex;
+        gap: 10px;
+    }
+}
+footer {
+    background-color: #111; /* match site style */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social img {
+    width: 40px; /* nice and visible */
+    height: 40px;
+    transition: 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* subtle pop effect */
+}
+
+/* Mobile friendly (no floating icons needed) */
+@media (max-width: 768px) {
+    .footer-social {
+        gap: 15px;
+    }
+}
+
+/* Playful Floating Social Bar for Contact Page */
+.floating-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Hover Effects */
+.floating-social a:hover {
+    transform: scale(1.3) rotate(10deg); /* grows and tilts */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Smooth floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.floating-social a {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Individual colors for each social */
+.floating-social a.facebook { background-color: #3b5998; }
+.floating-social a.facebook:hover { background-color: #2d4373; }
+
+.floating-social a.youtube { background-color: #ff0000; }
+.floating-social a.youtube:hover { background-color: #cc0000; }
+
+.floating-social a.instagram { background: #E1306C; }
+.floating-social a.instagram:hover { background: #C13584; }
+
+/* Mobile screens: keep it at the bottom */
+@media (max-width: 768px) {
+    .floating-social {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+    }
+}
+
+
+
+
 
