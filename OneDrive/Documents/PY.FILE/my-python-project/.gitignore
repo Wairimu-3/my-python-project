@@ -1,0 +1,6 @@
+# Ignore Windows system/app files
+AppData/
+*.log
+*.tmp
+*.json
+*.cfg

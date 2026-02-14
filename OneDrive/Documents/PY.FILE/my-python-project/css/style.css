@@ -1,0 +1,285 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;  /* reduced from 20px */
+    background-color: #111;
+    color: white;
+}
+
+
+
+/* Logo */
+.logo h1 {
+    font-size: 22px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("../images/background.jpeg") no-repeat center center/cover;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+.about-preview {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.about-preview h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-preview p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+}
+
+.ministries-preview {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.ministries-preview h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.ministries-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.ministry-card {
+    background-color: #f4f4f4;
+    padding: 30px;
+    width: 250px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.ministry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.ministry-card h3 {
+    margin-bottom: 15px;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: white;
+}
+
+/* About Page Hero */
+.about-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("../images/background.jpeg") no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-hero .hero-content h2 {
+    font-size: 36px;
+}
+
+.about-details {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.about-details h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-details p {
+    max-width: 800px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Ministries Details Page */
+.ministries-details {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.ministries-details .ministries-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.ministries-details .ministry-card {
+    background-color: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.ministries-details .ministry-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.ministries-details .ministry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.ministries-details .ministry-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Sermons Page */
+.sermons-details {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.sermons-details h2 {
+    margin-bottom: 40px;
+}
+
+.sermons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.sermon-card {
+    background-color: white;
+    padding: 15px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.sermon-card h3 {
+    margin: 15px 0 10px 0;
+}
+
+.sermon-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.sermon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
