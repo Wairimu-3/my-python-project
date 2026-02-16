@@ -6,43 +6,52 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pY0vEXaVQ0RzL4/6M0dfgF7jkI91dFvh+bWZV6uE6+9i6+uEZ6/1KnV+bk8nW6vbY6v7C9HfnKcVEXV3UR1KXQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
     <!-- Navigation -->
-    <header>
-        <div class="logo">
-    <a href="index.html">
+  <header>
+    <div class="logo">
         <img src="images/logo.jpg" alt="CFF Juja Farm Logo">
-    </a>
-</div>
+    </div>
 
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="ministries.html">Ministries</a></li>
-                <li><a href="sermons.html">Sermons</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+    </nav>
+</header>
+
 
     <!-- Hero Section -->
-   <section class="hero">
-    <div class="hero-content">
-        <h2>TRUE WORSHIP</h2>
-        <p>John 4:24</p>
-        <p>Join us every Sunday from 9:00 AM - 1:00 PM</p>
-        <a href="contact.html" class="btn">Visit Us</a>
+  <section class="hero">
+    <h2 class="hero-title">CHRISTIAN FOUNDATION FELLOWSHIP <br>~JUJA FARM~</h2>
+    <p class="hero-subtitle">TRUE WORSHIP <br>John 4:24
+
+    </span></p>
+    <p class="hero-service">Join us every Sunday from 9am to 1pm</p>
+    
+    <div class="hero-buttons">
+        <a href="about.html" class="btn btn-outline">Learn More</a>
+        <a href="contact.html" class="btn btn-primary">Visit Us</a>
     </div>
 </section>
 
 
+
     <!-- About Preview -->
-<section class="about-preview">
+<!-- <section class="about-preview">
     <h2>About CFF Juja Farm</h2>
     <p>
         Christian Foundation Fellowship Juja Farm is a Christ-centered church
@@ -51,10 +60,10 @@
         and the power of the Holy Spirit.
     </p>
     <a href="about.html" class="btn">Learn More</a>
-</section>
+</section> -->
 
 <!-- Ministries Preview -->
-<section class="ministries-preview">
+<!-- <section class="ministries-preview">
     <h2>Our Ministries</h2>
 
     <div class="ministries-container">
@@ -87,7 +96,7 @@
     </div>
 
     <a href="ministries.html" class="btn">View All Ministries</a>
-</section>
+</section> -->
 
    <footer>
     <div class="footer-content">
@@ -107,6 +116,11 @@
     </div>
 </footer>
 
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>

@@ -8,33 +8,92 @@
 <body>
 
     <!-- Navigation / Header -->
-    <header>
-        <div class="logo">
-            <a href="index.html">
-              <img src="images/logo.jpg" alt="CFF Juja Farm Logo">            </a>
-        </div>
+<header>
+    <div class="logo">
+        <img src="images/logo.jpg" alt="CFF Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+</header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="ministries.html">Ministries</a></li>
-                <li><a href="sermons.html">Sermons</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <!-- About Hero Section -->
-    <section class="hero about-hero">
+    <!-- <section class="hero about-hero">
         <div class="hero-content">
             <h2>About Christian Foundation Fellowship Juja Farm</h2>
             <p>TRUE WORSHIP - John 4:24</p>
         </div>
+    </section> -->
+
+    <main class="about-page">
+
+    <!-- Reverend Hero Section -->
+  <section class="reverend-hero">
+    <div class="reverend-layout">
+
+        <!-- Vision Box (Top) -->
+        <div class="mv-box vision">
+            <h3>Vision</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit saepe et necessitatibus delectus neque tempore asperiores. Voluptatem quam quibusdam mollitia aut quia quisquam corrupti molestias. Quod pariatur mollitia earum ipsa!</p>
+        </div>
+
+        <!-- Mission Box (Left) -->
+        <div class="mv-box mission">
+            <h3>Mission</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque culpa reiciendis expedita accusantium consectetur! Tempora nihil laboriosam voluptas nostrum tempore, asperiores veritatis minus libero voluptate ipsa aperiam quas fuga nesciunt?</p>
+        </div>
+
+        <!-- Reverend Photo & Quote (Center) -->
+        <div class="reverend-photo-quote">
+            <img src="images/reverend.jpeg" alt="Reverend" class="reverend-photo">
+            <blockquote class="reverend-quote">
+                "Raising a Godly generation in Faith and Holiness & restoring marriages through Gods love."
+            </blockquote>
+        </div>
+
+        <!-- Values Box (Right) -->
+        <div class="mv-box values">
+            <h3>Values</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae magnam cumque vel repellendus nostrum esse modi dolore fugiat eligendi iusto voluptates ipsum, suscipit quam, atque nisi soluta fuga, delectus assumenda.</p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Church History Section -->
+    <section class="about-history">
+        <h2>Church History</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore velit illum similique ex, excepturi veniam, quos alias facere, non qui exercitationem at veritatis! Sequi commodi assumenda magni molestiae tenetur quia?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae delectus id sunt ab consequatur obcaecati perferendis rem vel quisquam, voluptatem maiores maxime nam eaque vero. Ad ipsam voluptates eaque!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsa incidunt pariatur laudantium sit officiis ex ab. Doloribus, ab corrupti qui repudiandae beatae, blanditiis nobis quibusdam ducimus id officia eveniet!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit inventore vitae perferendis cumque corporis? Iste id cumque corporis impedit voluptatibus repellendus deserunt modi, accusamus quaerat, placeat ut ducimus, distinctio hic.</p>
+        <br>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At fugit maiores illo sint saepe. Saepe ad eaque ipsa. Assumenda nulla et architecto culpa ullam quae eos esse quos corporis illo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At iusto dolorem debitis vel cumque, saepe neque ipsa necessitatibus nihil? Ea obcaecati illum soluta quod sapiente eum aperiam magni sed architecto.</p>
     </section>
 
-    <!-- About Details -->
-    <section class="about-details">
+</main>
+
+    <!-- Mission / Vision / About -->
+    <!-- <section class="about-intro">
+        <h1>About Christian Foundation Fellowship Juja Farm</h1>
+        <p class="mission-vision">“TRUE WORSHIP - JOHN 4:24”</p>
+        <p class="about-text">
+            [Placeholder text for church history, mission, and vision.]
+        </p>
+    </section> -->
+ <!-- About Details -->
+    <!-- <section class="about-details">
         <div class="container">
             <h2>Our Mission</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Our mission placeholder here.</p>
@@ -46,6 +105,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Value placeholder here.</p>
         </div>
     </section>
+
+</main> -->
 
 <!-- Mobile Floating Social Logos -->
 <!-- <div class="mobile-social">
@@ -79,7 +140,10 @@
         </div>
     </div>
 </footer>
-
-
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("show");
+}
+</script>
 </body>
 </html>

@@ -43,6 +43,71 @@ header {
 
 
 /* Navigation */
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 220px;
+        background-color: #111;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 8px;
+
+        /* Animation setup */
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .nav-links.show {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -65,8 +130,8 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url("../images/background.jpeg") no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url("../images/background 2.jpeg") no-repeat center center/cover;
 
     color: white;
     display: flex;
@@ -76,10 +141,15 @@ nav ul li a:hover {
     text-align: center;
     padding: 20px;
 }
-
 .hero h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 60px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
     margin-bottom: 10px;
+
 }
 
 .hero-content {
@@ -88,9 +158,47 @@ nav ul li a:hover {
 
 
 .hero p {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
+.hero-title {
+    font-family: 'Cinzel', serif; /* or your chosen stylish font */
+    font-size: 60px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-family: 'Playfair Display', serif; /* elegant complement font */
+    font-size: 40px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #FFD700; /* gold accent */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.hero-service {
+    font-family: 'Montserrat', sans-serif; /* modern, readable */
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #ffffffcc; /* slightly transparent white for contrast */
+}
+
+@keyframes flashFade {
+  0%, 100%   { opacity: 0; }
+  50%        { opacity: 1; }
+}
+
+
+.hero-subtitle, .hero-service {
+    animation: flashFade 2s infinite;
+}
+
+
 
 /* Button */
 .btn {
@@ -124,6 +232,93 @@ nav ul li a:hover {
     margin: 0 auto 20px auto;
     font-size: 18px;
 }
+
+.reverend-hero {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url("../images/background 2.jpeg") no-repeat center center/cover;
+}
+
+.reverend-layout {
+    display: grid;
+    grid-template-areas:
+        ". vision ."
+        "mission photo values";
+    grid-template-columns: 1fr 300px 1fr; /* 300px center photo */
+    grid-template-rows: auto auto;
+    grid-gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Assign areas */
+.vision { grid-area: vision; }
+.mission { grid-area: mission; }
+.values { grid-area: values; }
+.reverend-photo-quote { grid-area: photo; text-align: center; }
+
+/* Reverend Photo & Quote */
+.reverend-photo {
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.reverend-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #FFD700;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Mission/Vision/Values Boxes */
+.mv-box {
+    background-color: #1a1a1a;
+    border: 2px solid #FFD700;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: 330px;
+}
+
+.mv-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.mv-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f2f2f2;
+    line-height: 1.6;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 900px) {
+    .reverend-layout {
+        grid-template-areas:
+            "photo"
+            "vision"
+            "mission"
+            "values";
+        grid-template-columns: 1fr;
+    }
+
+    .mv-box, .reverend-photo-quote {
+        width: 80%;
+    }
+}
+
+
+
 
 .ministries-preview {
     padding: 80px 20px;
@@ -173,8 +368,8 @@ footer {
 /* About Page Hero */
 .about-hero {
     height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url("../images/background.jpeg") no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url("../images/background 2.jpeg") no-repeat center center/cover;
     color: white;
     display: flex;
     justify-content: center;
