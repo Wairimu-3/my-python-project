@@ -1,0 +1,818 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;  /* reduced from 20px */
+    background-color: #111;
+    color: white;
+}
+
+
+
+/* Logo */
+.logo h1 {
+    font-size: 22px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+header .logo img {
+    width: 100px;            /* adjust as needed */
+    height: 100px;
+    border-radius: 50%;      /* makes it circular */
+    border: 3px solid #FFD700; /* subtle gold outline for elegance */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* gentle shadow */
+    object-fit: cover;       /* keeps the image aspect correct */
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.05);  /* small hover effect for interactivity */
+}
+
+/* Navigation */
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 220px;
+        background-color: #111;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 8px;
+
+        /* Animation setup */
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .nav-links.show {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url("../images/background 2.jpeg") no-repeat center center/cover;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.hero-title {
+    font-family: 'Cinzel', serif; /* or your chosen stylish font */
+    font-size: 60px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-family: 'Playfair Display', serif; /* elegant complement font */
+    font-size: 40px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #FFD700; /* gold accent */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.hero-service {
+    font-family: 'Montserrat', sans-serif; /* modern, readable */
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #ffffffcc; /* slightly transparent white for contrast */
+}
+
+@keyframes flashFade {
+  0%, 100%   { opacity: 0; }
+  50%        { opacity: 1; }
+}
+
+
+.hero-subtitle, .hero-service {
+    animation: flashFade 2s infinite;
+}
+
+
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+.about-preview {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.about-preview h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-preview p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+}
+
+.reverend-hero {
+    display: flex;
+    justify-content: center;
+    padding: 80px 10px 30px 20px;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url("../images/background 2.jpeg") no-repeat center center/cover;
+}
+
+.reverend-layout {
+    display: grid;
+    grid-template-areas:
+        ". vision ."
+        "mission photo values";
+    grid-template-columns: 1fr 300px 1fr; /* 300px center photo */
+    grid-template-rows: auto auto;
+    grid-gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Assign areas */
+.vision { grid-area: vision; }
+.mission { grid-area: mission; }
+.values { grid-area: values; }
+.reverend-photo-quote { grid-area: photo; text-align: center; }
+
+/* Reverend Photo & Quote */
+.reverend-photo {
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.reverend-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #FFD700;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Mission/Vision/Values Boxes */
+.mv-box {
+    background-color: #1a1a1a;
+    border: 2px solid #FFD700;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: 330px;
+}
+
+.mv-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.mv-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f2f2f2;
+    line-height: 1.6;
+}
+
+/* About Page*/
+.about-page {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url("../images/background 2.jpeg") no-repeat center center/cover;
+     color: #f4f4f4;
+}
+/* About Page Hero */
+.about-hero {
+    height: 50vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-hero .hero-content h2 {
+    font-size: 36px;
+}
+
+.about-details {
+    padding: 80px 20px;
+}
+
+.about-details h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-details p {
+    max-width: 800px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+/* .about-history h2{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #FFD700;
+    padding-bottom: 15px;
+    padding-top: 0px;
+} */
+.about-history h2 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #FFD700;
+    margin: 0 0 20px 0;  /* remove top margin */
+}
+.about-history p {
+    max-width:1300px;
+    margin: 0 auto 25px auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.about-history {
+    padding: 60px 20px 80px 20px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 900px) {
+    .reverend-layout {
+        grid-template-areas:
+            "photo"
+            "vision"
+            "mission"
+            "values";
+        grid-template-columns: 1fr;
+    }
+
+    .mv-box, .reverend-photo-quote {
+        width: 80%;
+    }
+}
+
+.ministries-preview {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.ministries-preview h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.ministries-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.ministry-card {
+    background-color: #f4f4f4;
+    padding: 30px;
+    width: 250px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.ministry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.ministry-card h3 {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: white;
+}
+
+
+/* Ministries Details Page */
+.ministries-details {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.ministries-details .ministries-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.ministries-details .ministry-card {
+    background-color: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.ministries-details .ministry-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.ministries-details .ministry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.ministries-details .ministry-card h3 {
+    margin-bottom: 10px;
+}
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+    transform: translateX(5px);
+}
+
+/* Sermons Page */
+.sermons-details {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.sermons-details h2 {
+    margin-bottom: 40px;
+}
+
+.sermons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.sermon-card {
+    background-color: white;
+    padding: 15px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.sermon-card h3 {
+    margin: 15px 0 10px 0;
+}
+
+.sermon-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.sermon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Contact Page */
+.contact-details {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.map iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contact-info-form {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-info, .contact-form {
+    flex: 1 1 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: gold;
+    color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-info-form {
+        flex-direction: column;
+    }
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-btn i {
+    font-size: 18px;
+}
+
+/* Facebook */
+.social-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-btn.facebook:hover {
+    background-color: #2d4373;
+}
+
+/* YouTube */
+.social-btn.youtube {
+    background-color: #ff0000;
+}
+
+.social-btn.youtube:hover {
+    background-color: #cc0000;
+}
+
+/* Instagram */
+.social-btn.instagram {
+    background: #E1306C; /* Instagram gradient pink */
+}
+
+.social-btn.instagram:hover {
+    background: #C13584; /* Darker hover */
+}
+/* Floating Social Bar */
+.floating-social {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+/* Facebook */
+.floating-social a.facebook {
+    background-color: #3b5998;
+}
+.floating-social a.facebook:hover {
+    background-color: #2d4373;
+}
+
+/* YouTube */
+.floating-social a.youtube {
+    background-color: #ff0000;
+}
+.floating-social a.youtube:hover {
+    background-color: #cc0000;
+}
+
+/* Instagram */
+.floating-social a.instagram {
+    background: #E1306C;
+}
+.floating-social a.instagram:hover {
+    background: #C13584;
+}
+
+/* Mobile Responsive: hide floating bar on small screens */
+@media (max-width: 768px) {
+    .floating-social {
+        display: none;
+    }
+}
+/* Mobile Social Logos */
+.mobile-social {
+    display: none; /* hidden on desktop */
+}
+
+.mobile-social a {
+    position: fixed;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+    z-index: 1000;
+}
+
+.mobile-social a img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Arrange logos horizontally */
+.mobile-social a.facebook { left: 15px; }
+.mobile-social a.youtube { left: 70px; }
+.mobile-social a.instagram { left: 125px; }
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+    .floating-social {
+        display: none; /* hide the vertical bar */
+    }
+    .mobile-social {
+        display: flex;
+        gap: 10px;
+    }
+}
+footer {
+    background-color: #111; /* match site style */
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social img {
+    width: 40px; /* nice and visible */
+    height: 40px;
+    transition: 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* subtle pop effect */
+}
+
+/* Mobile friendly (no floating icons needed) */
+@media (max-width: 768px) {
+    .footer-social {
+        gap: 15px;
+    }
+}
+
+/* Playful Floating Social Bar for Contact Page */
+.floating-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Hover Effects */
+.floating-social a:hover {
+    transform: scale(1.3) rotate(10deg); /* grows and tilts */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Smooth floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.floating-social a {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Individual colors for each social */
+.floating-social a.facebook { background-color: #3b5998; }
+.floating-social a.facebook:hover { background-color: #2d4373; }
+
+.floating-social a.youtube { background-color: #ff0000; }
+.floating-social a.youtube:hover { background-color: #cc0000; }
+
+.floating-social a.instagram { background: #E1306C; }
+.floating-social a.instagram:hover { background: #C13584; }
+
+/* Mobile screens: keep it at the bottom */
+@media (max-width: 768px) {
+    .floating-social {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+    }
+}
+
+
+
+
+
