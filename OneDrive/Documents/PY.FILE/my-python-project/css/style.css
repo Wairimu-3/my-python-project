@@ -41,6 +41,19 @@ header {
     height: 100px;
 }
 
+header .logo img {
+    width: 100px;            /* adjust as needed */
+    height: 100px;
+    border-radius: 50%;      /* makes it circular */
+    border: 3px solid #FFD700; /* subtle gold outline for elegance */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* gentle shadow */
+    object-fit: cover;       /* keeps the image aspect correct */
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.05);  /* small hover effect for interactivity */
+}
 
 /* Navigation */
 
