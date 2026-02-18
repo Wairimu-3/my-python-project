@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import smtplib
 from email.mime.text import MIMEText
+import os  # for environment variables
 
 app = Flask(__name__)
 
@@ -59,10 +60,10 @@ def contact():
         email = request.form.get("email")
         message = request.form.get("message")
 
-        # Gmail credentials (use App Password)
-        sender_email = "kimanimargaret46@gmail.com"
-        receiver_email = "kimanimargaret46@gmail.com"
-        app_password = "fikouqwfjeejmtlh"  # 16-char App Password
+        # Use environment variables for Gmail credentials
+        sender_email = os.environ.get("EMAIL_USER")
+        receiver_email = os.environ.get("EMAIL_USER")  # same as sender
+        app_password = os.environ.get("EMAIL_PASS")
 
         # Compose email
         body = f"""
@@ -102,3 +103,7 @@ Message: {message}
 # ------------------------
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+# fikouqwfjeejmtlh
