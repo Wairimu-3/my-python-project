@@ -103,3 +103,18 @@
         font-size: 18px;
     }
 }
+.sundayschool-gallery {
+    display: flex;
+    flex-direction: column;  /* stack vertically */
+    gap: 50px;               /* space between images */
+    align-items: center;     /* center horizontally */
+    margin-top: 100px;
+}
+
+.sundayschool-gallery img {
+    width: 90%;              /* almost full width */
+    max-width: 600px;        /* don’t get too wide on desktop */
+    border-radius: 8px;
+    object-fit: cover;       /* keep aspect ratio */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}

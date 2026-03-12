@@ -428,6 +428,34 @@ nav ul li a:hover::after {
     }
 }
 
+/* .ministries-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.ministries-title {
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ministries-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+} */
+
+.ministries-intro {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
 .ministries-preview {
     padding: 80px 20px;
     text-align: center;
@@ -447,21 +475,54 @@ nav ul li a:hover::after {
 }
 
 .ministry-card {
-    background: white;
-    padding: 30px;
-    width: 260px;
+    background-color: #fef9f4; /* soft cream */
+    padding: 25px 20px;
     border-radius: 12px;
-    border-top: 4px solid #FFD700;
-    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-top: 4px solid #FFD700;  /* golden stripe */
 }
 
 .ministry-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .ministry-card h3 {
-    margin-bottom: 15px;
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #333; /* dark gray for contrast, still elegant */
+    margin-bottom: 12px;
+}
+
+.ministry-card p {
+    font-family: 'Montserrat', sans-serif; /* modern, clean */
+    font-size: 15px;
+    color: #555; /* softer dark gray */
+    line-height: 1.6; /* more breathing space */
+    margin-bottom: 12px;
+}
+.ministry-card p strong {
+    color: #FFD700; /* tie in with the button */
+}
+/* Style bullet lists inside cards */
+.ministry-card .class-list {
+    list-style: none; /* remove default bullets */
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    gap: 5px; /* space between items */
+}
+
+.ministry-card .class-list li::before {
+    content: "•";       /* custom bullet */
+    color: #FFD700;     /* gold bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 15px;        /* space for alignment */
+    margin-left: -15px; /* aligns bullets with text start */
 }
 
 /* Footer */
@@ -513,16 +574,28 @@ nav ul li a:hover::after {
 .read-more {
     display: inline-block;
     margin-top: 15px;
-    color: #FFD700;
+    color: #FFD700; /* keep the gold accent */
     font-weight: bold;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 .read-more:hover {
     transform: translateX(5px);
+    opacity: 0.9;
+}
+.class-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
 }
 
+.class-list li {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
 /* Sermons Page */
 .sermons-details {
     padding: 60px 20px;
