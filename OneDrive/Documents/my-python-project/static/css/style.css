@@ -166,6 +166,7 @@ nav ul li a:hover::after {
 
 /* Hero Section */
 
+
 .hero {
     height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
@@ -248,6 +249,8 @@ nav ul li a:hover::after {
     }
 
 }
+
+
 
 /* Button */
 .btn {
@@ -634,6 +637,88 @@ nav ul li a:hover::after {
 }
 
 /* Contact Page */
+
+.contact-info {
+    flex: 1 1 300px;
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-family: 'Cinzel', serif;
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.contact-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #111;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #FFD700;
+}
+/* 2x2 Grid for Contact Page Socials */
+.contact-social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 per row */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Ensure consistent button size */
+.contact-social-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    min-width: 140px; /* optional, for uniformity */
+}
+
+/* Hover effect */
+.contact-social-grid a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* TikTok button color */
+.contact-social-grid a.tiktok {
+    background: #000000;
+}
+.contact-social-grid a.tiktok:hover {
+    background: #1c1c1c;
+}
+
+/* Adjust icon spacing inside buttons */
+.contact-social-grid a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 500px) {
+    .contact-social-grid {
+        grid-template-columns: 1fr; /* 1 per row */
+    }
+}
 .contact-details {
     padding: 60px 20px;
     background-color: #f4f4f4;
@@ -820,6 +905,99 @@ nav ul li a:hover::after {
     height: 100%;
 }
 
+/* Contact Info Blocks */
+.contact-info .info-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.contact-info .info-block i {
+    font-size: 20px;
+    color: #FFD700; /* gold accent */
+}
+
+.contact-info a {
+    color: #111;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #FFD700;
+}
+
+/* Form Labels */
+.contact-form label {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: #333;
+    letter-spacing: 0.3px;
+}
+
+/* Input / Textarea Focus */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FFD700;
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
+    outline: none;
+}
+
+/* 2x2 Social Grid already exists */
+/* TikTok button handled in previous CSS */
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.info-item i {
+    color: #FFD700;
+    font-size: 18px;
+    min-width: 20px;
+}
+
+.info-item p {
+    margin: 0;
+}
+
+.contact-info h3{
+border-bottom:2px solid #FFD700;
+padding-bottom:8px;
+}
+.contact-form h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-form h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #FFD700;
+    margin-top: 6px;
+}
+
 /* Arrange logos horizontally */
 .mobile-social a.facebook { left: 15px; }
 .mobile-social a.youtube { left: 70px; }
@@ -837,7 +1015,7 @@ nav ul li a:hover::after {
 }
 footer {
     background-color: #111; /* match site style */
-    color: white;
+    color: rgb(223, 222, 222);
     padding: 20px 20px;
     text-align: center;
 }
@@ -921,54 +1099,15 @@ footer {
         flex-direction: row;
     }
 }
-/* 2x2 Grid for Contact Page Socials */
-.contact-social-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto); /* 2 per row */
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
 
-/* Ensure consistent button size */
-.contact-social-grid a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s ease;
-    min-width: 140px; /* optional, for uniformity */
+/* Making mobile view responsive */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
 }
-
-/* Hover effect */
-.contact-social-grid a:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-
-/* TikTok button color */
-.contact-social-grid a.tiktok {
-    background: #000000;
-}
-.contact-social-grid a.tiktok:hover {
-    background: #1c1c1c;
-}
-
-/* Adjust icon spacing inside buttons */
-.contact-social-grid a i {
-    margin-right: 8px;
-    font-size: 18px;
-}
-
-/* Responsive: stack vertically on small screens */
-@media (max-width: 500px) {
-    .contact-social-grid {
-        grid-template-columns: 1fr; /* 1 per row */
-    }
+section {
+    padding: 70px 20px;
 }
 
 
