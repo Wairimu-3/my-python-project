@@ -921,7 +921,55 @@ footer {
         flex-direction: row;
     }
 }
+/* 2x2 Grid for Contact Page Socials */
+.contact-social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 per row */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+/* Ensure consistent button size */
+.contact-social-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    min-width: 140px; /* optional, for uniformity */
+}
+
+/* Hover effect */
+.contact-social-grid a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* TikTok button color */
+.contact-social-grid a.tiktok {
+    background: #000000;
+}
+.contact-social-grid a.tiktok:hover {
+    background: #1c1c1c;
+}
+
+/* Adjust icon spacing inside buttons */
+.contact-social-grid a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 500px) {
+    .contact-social-grid {
+        grid-template-columns: 1fr; /* 1 per row */
+    }
+}
 
 
 
